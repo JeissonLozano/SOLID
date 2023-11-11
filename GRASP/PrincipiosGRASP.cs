@@ -22,10 +22,13 @@ public class Pedido
 }
 
 // Principio de Experto en Información
-public class Pizza
+public abstract class Pizza
 {
     public string Nombre { get; set; }
     public decimal Precio { get; set; }
+    public string Tamanio { get; set; }
+
+    public abstract void CalcularPorciones();
 }
 
 public class Cliente
@@ -58,6 +61,12 @@ public class PizzaMargarita : Pizza
     {
         Nombre = "Margarita";
         Precio = 8.99m;
+        Tamanio = "Pequeña";
+    }
+
+    public override void CalcularPorciones()
+    {
+        Console.WriteLine("Dado mi tamaño, la cantidad de porciones es: " + 8);
     }
 }
 
@@ -67,6 +76,12 @@ public class PizzaPepperoni : Pizza
     {
         Nombre = "Pepperoni";
         Precio = 10.99m;
+        Tamanio = "Mediano";
+    }
+
+    public override void CalcularPorciones()
+    {
+        Console.WriteLine("Dado mi tamaño, la cantidad de porciones es: " + 15);
     }
 }
 
