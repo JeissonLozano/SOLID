@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CONSOLID\CONSOLID.csproj" />
     <ProjectReference Include="..\GRASP\GRASP.csproj" />
-    <ProjectReference Include="..\SINSOLID\SINSOLID.csproj" />
   </ItemGroup>
 
 </Project>
